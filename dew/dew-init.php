@@ -217,7 +217,7 @@ function dew_suite_init($config = array()) {
 }
 
 /**
-return instance of Dew_Theme_Suite
+*return instance of Dew_Theme_Suite
 */
 function dew_suite() {
 	return Dew_Theme_Suite::instance();
