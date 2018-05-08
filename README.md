@@ -20,5 +20,5 @@ An example functions.php file is included in the repo.
 | media_sizes | Array | Array of Media size associative array that takes parameters for add_image_size. [Refer](https://developer.wordpress.org/reference/functions/add_image_size/) |
 | tgmpa | Array | Define tgmpa options and the recommended/bundled plugins plugins. [Refer](http://tgmpluginactivation.com/configuration/) |
 | redux | Array | Define theme-options page and Redux Framework configurations. [Refer](https://docs.reduxframework.com/uncategorized/getting-started-with-arguments/) |
-| admin_pages | Array | Array of Admin Pages and sub menu pages |
-| toolbar | Array | Array of admin pages on the toolbar |
+| admin_pages | Array | Array of Admin Pages and sub menu pages. [Refer](https://developer.wordpress.org/reference/functions/add_menu_page/)|
+| toolbar | Array | Array of admin pages on the toolbar. [Refer](https://codex.wordpress.org/Class_Reference/WP_Admin_Bar/add_node) |
