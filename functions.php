@@ -8,9 +8,10 @@
 $dir = get_template_directory();
 $uri = get_template_directory_uri();
 $images = get_template_directory_uri() . '/images/';
+$textdomain = 'voltroid-theme';
 
 $theme_config = array(
-	'textdomain' => 'voltroid-theme',
+	'textdomain' => $textdomain,
 	'media_sizes' => array(
 		'dew-medium'=> array( 'width'=> '300', 'height' => '300','crop' => true ),
 		'dew-large' => array( 'width'=> '1024', 'height' => '','crop' => false ),
@@ -24,7 +25,7 @@ $theme_config = array(
 		),
 		'plugins' => array(
 			array(
-				'name'				=> esc_html__( 'Visual Composer', 'voltroid-theme' ),
+				'name'				=> esc_html__( 'Visual Composer', $textdomain ),
 				'slug'				=> 'js_composer',
 				'required'			=> true,
 				'source'			=> 'http://example.com/Visual-Composer.zip',
@@ -34,7 +35,7 @@ $theme_config = array(
 				'dew_description' 	=> 'Bundled Plugin'
 			),
 			array(
-				'name'				=> esc_html__( 'Redux Framework', 'voltroid-theme' ),
+				'name'				=> esc_html__( 'Redux Framework', $textdomain ),
 				'slug'				=> 'redux-framework',
 				'required'			=> true,
 				'dew_logo'			=> $images . '/redux.png',
@@ -42,7 +43,7 @@ $theme_config = array(
 				'dew_description'	=> 'Redux is a simple, truly extensible and fully responsive options framework for WordPress themes and plugins.'
 			),
 			array(
-				'name'				=> esc_html__( 'Contact Form 7', 'voltroid-theme' ),
+				'name'				=> esc_html__( 'Contact Form 7', $textdomain ),
 				'slug'				=> 'contact-form-7',
 				'required'			=> false,
 				'dew_logo'			=> $images . '/placeholder.jpg',
@@ -56,7 +57,7 @@ $theme_config = array(
 
 			'opt_name'				=> 'dew_options',
 
-			'display_name'			=> esc_html__( 'Voltroid Theme', 'voltroid-theme' ),
+			'display_name'			=> esc_html__( 'Voltroid Theme', $textdomain ),
 			'display_version'		=> '1.0.0',
 
 			'page_parent'			=> 'dew',
@@ -64,8 +65,8 @@ $theme_config = array(
 			'page_slug'				=> 'dew-theme-options',
 			'global_variable'		=> 'dew_options',
 
-			'menu_title'			=> esc_html__( 'Theme Options', 'voltroid-theme' ),
-			'page_title'			=> esc_html__( 'Theme Options', 'voltroid-theme' ),
+			'menu_title'			=> esc_html__( 'Theme Options', $textdomain ),
+			'page_title'			=> esc_html__( 'Theme Options', $textdomain ),
 
 
 			//'templates_path'		=> $dir . '/admin/templates/',
