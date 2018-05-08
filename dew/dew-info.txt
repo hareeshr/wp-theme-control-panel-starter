@@ -1,0 +1,156 @@
+dew-init.php
+	- Class Dew_Theme_Suite
+		- init_hooks 						// initialize hooks
+		- instance 							// return instance of Class
+		- set_config 						// set config
+		- get_config 						// get config
+		- includes 							// include dew files
+		- setup_theme 						// theme setup
+		- admin 							// initialize theme
+		- init_redux 						// initialize redux
+		- load_redux_extensions 			// load redux extensions
+		- register_gradient 				// register redux gradient
+		- register_typography 				// register redux typography
+		- register_color_rgba 				// register redux rgba
+		- extensions 						// load other extensions from files
+		- load_theme_part 					// load theme part
+		- load_library 						// load library files
+		- load_assets 						// load assets
+
+	- dew_suite_init						// initialize Dew_Theme_Suite class
+	- dew_suite 							// return instance of Dew_Theme_Suite class
+
+dew-base.php
+	- Class Dew_Theme_Base
+		- add_action 						// add dew action
+		- add_filter 						// add dew filter
+		- set_option_name 					// set option name
+		- get_option_name 					// get option name
+		- get_version 						// get version
+
+	- dew_action 							// do custom actions
+
+dew-core.php
+	- Class Dew_Core
+		- instance 							// return instance of Class
+		- init_filesystem 					// initialize filesystem
+		- get_current_theme 				// return current theme
+		- ajax_url 							// return ajax url
+		- get_sidebars 						// return sidebars
+		- get_template_part 				// include template part
+		- has_seo_plugins 					// check for seo plugins
+		- get_menu_location_name 			// get menu location name
+		- get_attachment_types 				// get attachment types
+		- get_attachment_type 				// get attachment type
+		- get_attachment_subtype 			// get attachment subtype
+		- is_attachment_audio 				// check if audio
+		- is_attachment_video 				// check if video
+		- is_plural 						// check if home/search/archieve
+		- get_vc_custom_css 				// get visual composer css
+		- get_post_meta 					// get post meta
+		- get_current_page_id 				// get current page id
+		- is_woocommerce_active 			// is woocommerce active
+		- site_title 						// print site title
+		- get_site_title 					// return site title
+		- site_description					// print site description
+		- get_site_description				// return site description
+
+	- dew_core 								// return Dew_Core instance
+
+dew-assist.php
+	- Class Dew_Assist
+		- instance 							// return instance of Class
+		- sanitize_html_classes 			// sanitize html classes
+		- add_to_url_from_get 				// add to url from _GET
+		- output_css 						// output css
+		- sanitize_unit 					// sanitize unit
+		- str_contains 						// if string contains
+		- str_starts_with 					// if string starts with
+		- html_attributes 					// return html attributes
+		- attr 								// print attributes
+		- get_attr 							// return attributes
+		- get_theme_option 					// get theme option
+		- get_option_echo 					// print option
+		- get_option 						// return option
+		- get_shadow_css					// get shadow css
+		- create_box_shadow_property		// create box shadow property css
+		- envato_market_page_url			// Return envato-market page
+		- generate_plugin_action			// Generate plugin action link
+		- dashboard_page_url				// Return Dashboard Page URL
+
+
+	- dew_assist 							// return Dew_Assist
+
+dew-template-tags.php
+	- dew_get_content_template 				// get content template
+			templates/content/attachment-{$type}.php
+			templates/content/{$post_type}-{$post_format}.php
+			templates/content/{$post_format}.php
+			templates/content/{$post_type}.php
+			templates/content/content.php
+	- /*google fonts*/
+
+dew-media.php
+	- dew_get_the_small_image 				// return small image
+	- dew_get_retina_image 					// return retina image
+	- dew_the_post_thumbnail 				// return thumbnail image
+	- dew_get_resized_image_src 			// return resized image
+	- dew_image_sizes 						// return dew image sizes
+
+dew-redux-config.php
+	- Class Dew_Redux_Config
+		- get_redux 						// return redux framework instance
+		- set_arguments 					// set redux arguments
+		- remove_demo 						// Remove demo link and the notice of demo from the redux plugin
+		- set_sections 						// Set Sections
+
+dew-redux-metabox.php
+	- Class Dew_Redux_Metabox
+		- add_metaboxes 					// Add Metaboxes
+			metaboxes/dew-{$section}.php
+		- process_sections 					// Process sections
+
+dew-dynamic-css.php
+	- Class Dew_Dynamic_CSS
+		- set_mode 							// set file or inline mode
+		- make_css 							// Generate CSS
+		- needs_update 						// Check need for update
+		- page_id 							// get the current page ID.
+		- can_write 						// Check if the CSS file is writable.
+		- file 								// Return CSS path
+		- dynamic_css_cached				// Return Dynamic CSS
+		- dynamic_css 						// organize dynamic css
+		- dynamic_css_parser				// Parse dynamic css
+		- enqueue_dynamic_css				// Enqueue the dynamic CSS.
+		- add_inline_css 					// Add Inline CSS
+		- reset_post_transient 				// Reset the dynamic CSS transient for a post.
+		- post_update_option	 			// Update css option when post saved.
+		- add_options 						// Create settings.
+		- reset_all_caches 					// Reset all Cache
+		- reset_all_transients 				// Reset ALL CSS transient caches.
+		- clear_cache 						// Reset cache
+		- clear_varnish_cache 				// Clear varnish cache
+		- global_reset_option 				// reset css option
+		- update_saved_time 				// Update the 'dynamic_css_time' option.
+
+admin/dew-admin-init.php
+	- class Dew_Admin
+		- init   							// Initialize Admin Pages and plugins
+		- load_admin_pages					// Load Admin Pages
+		- enqueue   						// Enqueu CSS and JS
+		- vc_frontend_editor_js   			// Visual Composer
+		- vc_iconpicker_editor_jscss  	 	// Visual Composer
+		- admin_redirects   				// Admin redirects
+		- toolbar   						// Add admin to toolbar
+		- fix_parent_menu   				// Parent Menu Fix
+		- save_plugins   					// Save plugins
+
+admin/dew-reg-plugins.php
+	- _s_register_required_plugins			// Register the required plugins
+
+admin/dew-admin-page.php
+	- Class Dew_Admin_Page
+		- display							// Display Dashboard View
+		- register_page						// Register Menu Page
+		- save								// **empty**
+
